@@ -1,8 +1,11 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-core');
 require('dotenv').config();
 
 const automateComptalia = async () => {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.connect({
+    browserWSEndpoint: 'wss://production-sfo.browserless.io?token=2TBtQbpffGwwgtGc1cf4a344aad6b878f1478ddc86d2509d4',
+  });
+
   const page = await browser.newPage();
 
   await page.goto('https://www.comptalia.com/connexion');
@@ -16,7 +19,7 @@ const automateComptalia = async () => {
   ]);
 
   const studentName = process.env.STUDENT_NAME;
-  await page.goto(`https://www.comptalia.com/dashboard/corrections`);
+  await page.goto('https://www.comptalia.com/dashboard/corrections');
 
   await page.waitForSelector('.student-name');
   const studentLink = await page.evaluate((studentName) => {
