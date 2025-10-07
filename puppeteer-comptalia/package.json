@@ -1,0 +1,10 @@
+{
+  "name": "puppeteer-comptalia",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^21.3.8",
+    "dotenv": "^16.3.1"
+  }
+}

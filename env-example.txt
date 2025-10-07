@@ -1,0 +1,6 @@
+# Identifiants Comptalia
+LOGIN=gael.verdaguer@hotmail.fr
+PASSWORD=thDZ80WQ
+
+# Nom de l'étudiant à chercher (ex: Laurine ETAVE)
+STUDENT_NAME=Laurine ETAVE
